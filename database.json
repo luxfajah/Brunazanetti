@@ -1,0 +1,111 @@
+{
+  "client": {
+    "name": "Nome do Cliente",
+    "username": "usuario_cliente",
+    "profile_pic": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
+    "bio": "| Especialidade ou Profissão<br>| Informação adicional<br>| Mais detalhes sobre a atuação... <span style=\"color:#a0a0a0;\">mais</span>",
+    "link": "https://linktr.ee/cliente",
+    "stats": {
+      "posts": "192",
+      "followers": "2.503",
+      "following": "1.982"
+    },
+    "followed_by_text": "Seguido(a) por <strong>perfil_amigo</strong>, <strong>parceiro</strong> e outras 2 pessoas",
+    "followed_by_images": [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=48&h=48",
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=48&h=48"
+    ]
+  },
+  "metadata": {
+    "campaign_focus": "Apresentação e Posicionamento",
+    "deadline": "Em aberto",
+    "month_name": "Mês de Teste"
+  },
+  "downloads": {
+    "full_folder": "https://drive.google.com/drive/folders/xxxxx",
+    "items": [
+      {
+        "id": "1",
+        "title": "Post 1 — Carrossel",
+        "link": "https://drive.google.com/drive/folders/yyyyy"
+      },
+      {
+        "id": "2",
+        "title": "Post 2 — Carrossel",
+        "link": "https://drive.google.com/drive/folders/zzzzz"
+      },
+      {
+        "id": "3",
+        "title": "Post 3 — Imagem Única",
+        "link": "https://drive.google.com/drive/folders/aaaaa"
+      }
+    ]
+  },
+  "highlights": [
+    {
+      "id": "hl_1",
+      "title": "Comece Aqui",
+      "cover": "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=150&h=150",
+      "color": "var(--purple)"
+    },
+    {
+      "id": "hl_2",
+      "title": "Agende",
+      "cover": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=150&h=150",
+      "color": "var(--rose)"
+    }
+  ],
+  "profile_posts": [
+    { "id": "1", "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&q=80&w=300&h=300" },
+    { "id": "2", "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=300&h=300" },
+    { "id": "3", "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=300&h=300" }
+  ],
+  "approval_posts": [
+    {
+      "id": "1",
+      "type": "carousel",
+      "date": "Quinta, 11 de Junho",
+      "theme": "Carrossel",
+      "title": "Peça 01 — Apresentação",
+      "images": [
+        "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&q=80&w=600&h=800",
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600&h=800"
+      ],
+      "copy": [
+        "Texto exemplo para a lâmina 01 do carrossel.",
+        "Texto exemplo para a lâmina 02 do carrossel."
+      ],
+      "caption": "Esta é a legenda do primeiro post de aprovação. \n\nAtenciosamente,\nEquipe."
+    },
+    {
+      "id": "2",
+      "type": "carousel",
+      "date": "Quinta, 18 de Junho",
+      "theme": "Carrossel",
+      "title": "Peça 02 — Posicionamento",
+      "images": [
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600&h=800",
+        "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=600&h=800"
+      ],
+      "copy": [
+        "Lâmina 01: Mensagem de posicionamento.",
+        "Lâmina 02: Continuação do posicionamento."
+      ],
+      "caption": "Legenda do segundo post."
+    },
+    {
+      "id": "3",
+      "type": "single",
+      "date": "Quinta, 25 de Junho",
+      "theme": "Imagem Única",
+      "title": "Peça 03 — Locais de atendimento",
+      "images": [
+        "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=600&h=800"
+      ],
+      "copy": [
+        "Texto único que vai na imagem"
+      ],
+      "caption": "Inserir endereço (ainda não temos, ela vai confirmar, mas pode deixar apenas a base)"
+    }
+  ]
+}
