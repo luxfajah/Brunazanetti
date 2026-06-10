@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carregando...</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=2.2"/>
+  <style>
+    /* Custom overrides */
+    .hero-logo-text {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 3.5rem;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+      margin: 1.5rem 0;
+      text-transform: uppercase;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .ig-ava-placeholder {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d4c5b9 0%, #b8a698 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .preloader {
+      position: fixed; inset: 0; background: #FAFAFA; z-index: 100000;
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.6s, visibility 0.6s;
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader" class="preloader">
+  <div class="loader-content" style="display:flex; flex-direction:column; align-items:center; gap:0;">
+    <div class="ig-ava-placeholder" style="width:86px; height:86px; overflow:hidden; border-radius:50%; box-shadow:0 8px 32px rgba(0,0,0,0.18);">
+      <img id="preloader-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;" alt="Loading">
+    </div>
+    <div id="preloader-name" style="margin-top:14px; font-family: 'Inter', -apple-system, sans-serif; font-size:1rem; font-weight:300; letter-spacing:0.12em; color:#fff; text-shadow:0 2px 10px rgba(0,0,0,0.25); text-align:center;">Aguarde...</div>
+    <div class="loader-bar-wrap" style="margin-top:18px;">
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Tela de Login -->
+<div id="login-screen" class="login-screen">
+  <div class="login-box" style="position: relative; z-index: 10;">
+    <div class="ig-ava-placeholder" style="width:70px; height:70px; font-size:30px; font-weight:300; margin: 0 auto 15px; overflow:hidden;">
+      <img id="login-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;" alt="Login">
+    </div>
+    <h2>Acesso ao Painel</h2>
+    <input type="text" id="login-user" placeholder="Usuário">
+    <input type="password" id="login-pass" placeholder="Senha">
+    <button id="login-btn">Entrar</button>
+    <div id="login-error" class="login-error"></div>
+  </div>
+  <div class="login-mini-footer">Desenvolvido por Duas Mãos</div>
+</div>
+
+<!-- GLOBAL BACKGROUNDS -->
+<div class="hero-overlay"></div>
+<div class="hero-grain"></div>
+
+<!-- HEADER -->
+<header class="dashboard-header reveal" style="flex-direction: column; align-items: center;">
+  <div style="width: 100%; max-width: 1200px; display: flex; justify-content: flex-start; margin-bottom: 16px;">
+    <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; color: #fff; text-decoration: none; font-size: 13px; font-weight: 500; opacity: 0.8; transition: opacity 0.2s;">
+      <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span> Voltar ao Portal
+    </a>
+  </div>
+  <div class="dh-container">
+    <div class="dh-client">
+      <div class="dh-avatar">
+        <img id="header-avatar" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Client">
+      </div>
+      <div class="dh-titles">
+        <div class="dh-eyebrow" id="header-eyebrow">Planejamento de conteúdo · ...</div>
+        <h1 class="dh-name" id="header-name">Carregando...</h1>
+        <p class="dh-tagline">Revise, comente e aprove as peças abaixo.</p>
+      </div>
+    </div>
+
+    <div class="dh-metrics">
+      <div class="metric-box">
+        <div class="m-icon">📋</div>
+        <div class="m-text">
+          <span class="m-label">Foco da Campanha</span>
+          <span class="m-val" id="header-focus">...</span>
+        </div>
+      </div>
+      <div class="metric-box">
+        <div class="m-icon">⏰</div>
+        <div class="m-text">
+          <span class="m-label">Prazo de Resposta</span>
+          <span class="m-val" id="header-deadline">...</span>
+        </div>
+      </div>
+      
+      <div class="dh-progress-box">
+        <div class="dh-progress-texts">
+          <span class="dh-prog-label">Progresso</span>
+          <span class="dh-prog-count" id="infoCount">0 de 0 aprovados</span>
+        </div>
+        <div class="dh-pb-track">
+          <div class="dh-pb-fill" id="infoFill" style="width:0%"></div>
+        </div>
+        <button class="btn-clear" onclick="clearState()"><span class="material-symbols-outlined" style="font-size:14px; vertical-align:text-bottom;">refresh</span> Limpar Sessão</button>
+      </div>
+    </div>
+  </div>
+  <div style="display:none;"><div id="pbFill"></div><div id="pbLabel"></div></div>
+</header>
+
+<!-- OVERVIEW (Instagram Profile) -->
+<section class="overview-section" id="overview" style="position:relative;">
+  <div class="overview-split">
+    <div class="igp reveal">
+      <div class="igp-top">
+        <div class="igp-header-main">
+          <div class="igp-avatar-ring">
+            <img id="igp-avatar" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Client">
+          </div>
+          <div class="igp-info-col">
+            <div class="igp-user-row">
+              <span class="igp-username" id="igp-username">...</span>
+              <span class="igp-dots">···</span>
+            </div>
+            
+            <div class="igp-stats">
+              <div class="igp-stat"><div class="igp-stat-num" id="igp-stat-posts">0</div><div class="igp-stat-lbl">posts</div></div>
+              <div class="igp-stat"><div class="igp-stat-num" id="igp-stat-followers">0</div><div class="igp-stat-lbl">seguidores</div></div>
+              <div class="igp-stat"><div class="igp-stat-num" id="igp-stat-following">0</div><div class="igp-stat-lbl">seguindo</div></div>
+            </div>
+
+            <div class="igp-bio" id="igp-bio">...</div>
+            <a href="#" id="igp-link" class="igp-bio-link" target="_blank" style="color:#00376b;text-decoration:none;">🔗 ...</a>
+            
+            <div class="igp-followed" id="igp-followed" style="display:flex; align-items:center; margin-top:10px;">
+              <!-- Dynamic followed pics -->
+            </div>
+
+            <div class="igp-actions">
+              <button class="igp-btn">Seguindo ▾</button>
+              <button class="igp-btn">Enviar mensagem</button>
+              <button class="igp-btn-add">👤⁺</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="igp-highlights" id="igp-highlights-container">
+          <!-- Dynamic Highlights -->
+        </div>
+      </div>
+
+      <div class="igp-tabs">
+        <div class="igp-tab active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+        <div class="igp-tab"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M10 8l6 4-6 4V8z"/></svg></div>
+        <div class="igp-tab"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 2v6h6M21.5 22v-6h-6"/><path d="M22 11.5A10 10 0 0 0 3.2 7.2M2 12.5a10 10 0 0 0 18.8 4.3"/></svg></div>
+        <div class="igp-tab"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg></div>
+      </div>
+      
+      <div class="igp-grid" id="igp-grid-container">
+        <!-- Dynamic Grid Posts -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POSTS CAROUSEL -->
+<section class="posts-carousel-main" id="mainPostsCarousel">
+  <button class="pc-nav pc-prev" onclick="moveMainPosts(-1)"><span class="material-symbols-outlined">chevron_left</span></button>
+  <button class="pc-nav pc-next" onclick="moveMainPosts(1)"><span class="material-symbols-outlined">chevron_right</span></button>
+
+  <div class="post-indicator" id="postIndicator">
+    <!-- Dynamic indicators -->
+  </div>
+
+  <div class="posts-horizontal-track" id="mainPostsTrack">
+    <!-- Dynamic Approval Posts -->
+  </div>
+</section>
+
+<!-- Error Modal -->
+<div id="error-modal" class="error-modal">
+  <div class="error-content">
+    <button class="error-close" id="closeErrorModal" onclick="document.getElementById('error-modal').classList.remove('open')">&times;</button>
+    <div style="font-size: 40px; margin-bottom: 15px;">⚠️</div>
+    <h3 style="margin-bottom: 10px; font-family: 'Canela', serif;">Erro no Servidor</h3>
+    <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Não foi possível completar a ação. Por favor, copie a mensagem de erro abaixo:</p>
+    <div id="error-message-text" style="background: #f8f8f8; padding: 15px; border-radius: 12px; font-family: monospace; font-size: 13px; color: #d00; margin-bottom: 20px; word-break: break-all; text-align: left; border: 1px solid #eee;"></div>
+    <button class="abtn btn-ap" style="width: 100%;" onclick="document.getElementById('error-modal').classList.remove('open')">Entendido</button>
+  </div>
+</div>
+
+<!-- FINAL DASHBOARD (Downloads and Summary) -->
+<section class="final-dashboard-section" style="margin: 80px 0 120px 0; padding: 0 5vw;">
+  <div class="post-split" style="height: auto; min-height: auto; max-height: none;">
+    <!-- Downloads -->
+    <div class="post-panel" style="padding: 40px; display: flex; flex-direction: column; justify-content: center; height: 100%;">
+      <h2 style="font-family: var(--font-head); font-size: 32px; color: var(--text); margin-bottom: 8px;">Arquivos Originais</h2>
+      <p style="color: rgba(0,0,0,0.6); margin-bottom: 32px; font-size: 14px;">Baixe as artes em alta qualidade para publicar no seu Instagram.</p>
+      <div id="downloads-container" style="display: flex; flex-direction: column; gap: 12px;">
+        <!-- Dynamic downloads -->
+      </div>
+    </div>
+    <!-- Summary -->
+    <div class="post-panel" style="padding: 40px; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+      <div>
+        <h2 style="font-family: var(--font-head); font-size: 40px; color: var(--text); margin-bottom: 16px; line-height: 1;">Obri<em>gada!</em></h2>
+        <p style="color: rgba(0,0,0,0.6); line-height: 1.6; font-size: 15px;">Fique à vontade para enviar qualquer feedback adicional. Isso nos ajuda a evoluir cada detalhe do seu projeto e entregar o melhor resultado possível.</p>
+      </div>
+      <div style="margin-top: 40px;">
+        <h3 style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(0,0,0,0.4); margin-bottom: 16px;">Resumo da Aprovação</h3>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <div class="summary-pill approved-pill">
+            <span class="sp-num" id="f-approved">0</span><span class="sp-lbl">Aprovados</span>
+          </div>
+          <div class="summary-pill pending-pill">
+            <span class="sp-num" id="f-pending">0</span><span class="sp-lbl">Pendentes</span>
+          </div>
+          <div class="summary-pill rejected-pill">
+            <span class="sp-num" id="f-rejected">0</span><span class="sp-lbl">Reprovados</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 40px; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 24px; font-size: 13px; color: rgba(0,0,0,0.4);">
+        Criado com cuidado pela <strong>Duas Mãos.</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="toast"><span class="ti material-symbols-outlined" id="ti"></span><span class="tm" id="tm"></span></div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <div class="lb-backdrop" onclick="closeLightbox()"></div>
+  <div class="lb-split">
+    <div class="lb-left">
+      <div class="lb-slice-container">
+        <div class="lb-track" id="lbTrack"></div>
+      </div>
+      <button class="lb-left-prev" id="lbPrev" onclick="lbSlide(-1)"><span class="material-symbols-outlined">chevron_left</span></button>
+      <button class="lb-left-next" id="lbNext" onclick="lbSlide(1)"><span class="material-symbols-outlined">chevron_right</span></button>
+      <div class="lb-dots" id="lbDots"></div>
+    </div>
+    <div class="lb-right">
+      <div class="lb-rh">
+        <div class="lb-rh-ava"><img id="lb-client-ava" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Client"></div>
+        <div class="lb-rh-name" id="lb-client-username">...</div>
+        <button class="lb-rh-close" onclick="closeLightbox()"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="lb-rbody">
+        <div class="lb-rcaption" id="lbCaption"></div>
+        <div class="lb-rcards" id="lbCards"></div>
+        <div class="lb-rdiv"></div>
+        <div class="lb-rfeedback-lbl">Feedback do Cliente</div>
+        <div id="lbCommentsList"></div>
+      </div>
+      <div class="lb-raction-row" id="lbActionRow">
+      </div>
+      <div class="lb-rcomment-input">
+        <textarea id="lbTextarea" placeholder="Escreva um comentário..."></textarea>
+        <button class="lb-rpost-btn" onclick="lbSendComment()">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODALS -->
+<div id="reviewModal" class="modal-overlay">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3>Solicitar Revisão</h3>
+      <button class="modal-close" onclick="closeReviewModal()"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <div class="modal-body">
+      <p>O que precisa ser ajustado neste conteúdo?</p>
+      <textarea id="reviewTextarea" rows="4" placeholder="Descreva aqui os pontos que precisam de atenção..."></textarea>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-btn btn-sec" onclick="closeReviewModal()">Cancelar</button>
+      <button class="modal-btn btn-pri" id="confirmReviewBtn">Confirmar Revisão</button>
+    </div>
+  </div>
+</div>
+
+<div id="commentsModal" class="modal-overlay">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3>Histórico de Comentários</h3>
+      <button class="modal-close" onclick="closeCommentsModal()"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <div class="modal-body">
+      <div id="modalCommentsList" class="modal-comments-list"></div>
+      <div class="modal-input-area">
+        <textarea id="modalCommentInput" rows="2" placeholder="Adicione um novo comentário..."></textarea>
+        <button class="modal-btn btn-pri" id="modalSendCommentBtn">Enviar Comentário</button>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-btn btn-sec" onclick="closeCommentsModal()">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<div id="hiddenCommentsData" style="display:none">
+  <!-- Dynamic comment holders generated by app.js -->
+</div>
+
+<div id="projectViewer">
+  <div class="pv-header">
+    <div class="pv-title-box">
+      <h2 id="pvTitle">...</h2>
+      <button class="pv-back" onclick="closeProject()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="pv-content" id="pvContent"></div>
+  <div class="pv-footer-back">
+    <div class="pv-content" style="padding-top:0; padding-bottom:100px;">
+      <button class="pv-back" onclick="closeProject()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script defer src="app.js"></script>
+</body>
+</html>
