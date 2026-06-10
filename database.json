@@ -1,0 +1,93 @@
+{
+  "client": {
+    "name": "Bruna Zanetti",
+    "username": "brunazanetti.psico",
+    "profile_pic": "media/foto.jpg",
+    "bio": "Psicóloga | Infância • família • desenvolvimento<br>A história de uma família sempre diz mais do que o sintoma.<br>Porto Alegre/RS",
+    "link": "",
+    "stats": {
+      "posts": "0",
+      "followers": "0",
+      "following": "0"
+    },
+    "followed_by_text": "Seguido(a) por <strong>duasmaos</strong>",
+    "followed_by_images": []
+  },
+  "metadata": {
+    "campaign_focus": "Apresentação e Posicionamento",
+    "deadline": "Em aberto",
+    "month_name": "Junho"
+  },
+  "downloads": {
+    "full_folder": "",
+    "items": []
+  },
+  "highlights": [],
+  "profile_posts": [
+    { "id": "1", "image": "media/Post 1 - 1.png" },
+    { "id": "2", "image": "media/Post 2 - 1.png" },
+    { "id": "3", "image": "media/Post 3.png" }
+  ],
+  "approval_posts": [
+    {
+      "id": "1",
+      "type": "carousel",
+      "date": "Post 1",
+      "theme": "Apresentação",
+      "title": "Conteúdo 1 | Apresentação da Bruna",
+      "images": [
+        "media/Post 1 - 1.png",
+        "media/Post 1 - 2.png",
+        "media/Post 1 - 3.png",
+        "media/Post 1 - 4.png",
+        "media/Post 1 - 5.png",
+        "media/Post 1 -6.png"
+      ],
+      "copy": [
+        "A história de uma família sempre diz mais do que o sintoma. É pra ela que eu olho primeiro.",
+        "Eu sou a Bruna Zanetti. Psicóloga, com foco em primeira infância e famílias. Seja bem-vindo!",
+        "Quando uma criança chega até mim, o olhar sensível para a família é de onde eu parto. Escuto os pais, entendo a rotina, olho o contexto, porque a criança não existe sozinha, ela existe dentro de uma rede, e é ali que o olhar precisa começar…",
+        "Eu trabalho com crianças pequenas, de 0 a 5 anos, e com pais que estão vivendo os desafios da parentalidade.",
+        "Meu foco é acolher tanto a infância que se desenvolve, quanto os adultos que também estão aprendendo a ser pais…",
+        "Este espaço é pra isso: refletir, desmistificar e acolher. Para começarmos, me conta aqui nos comentários, qual está sendo o seu maior desafio na parentalidade hoje?"
+      ],
+      "caption": "A história de uma família sempre diz mais do que o sintoma. É pra ela que eu olho primeiro. \n\nEu sou a Bruna Zanetti. Psicóloga, com foco em primeira infância e famílias. Seja bem-vindo!\n\nQuando uma criança chega até mim, o olhar sensível para a família é de onde eu parto. Escuto os pais, entendo a rotina, olho o contexto, porque a criança não existe sozinha, ela existe dentro de uma rede, e é ali que o olhar precisa começar…\n\nEu trabalho com crianças pequenas, de 0 a 5 anos, e com pais que estão vivendo os desafios da parentalidade. Meu foco é acolher tanto a infância que se desenvolve, quanto os adultos que também estão aprendendo a ser pais… \n\nEste espaço é pra isso: refletir, desmistificar e acolher. Para começarmos, me conta aqui nos comentários, qual está sendo o seu maior desafio na parentalidade hoje?"
+    },
+    {
+      "id": "2",
+      "type": "carousel",
+      "date": "Post 2",
+      "theme": "Abordagem",
+      "title": "Conteúdo 2 | Abordagem da Bruna",
+      "images": [
+        "media/Post 2 - 1.png",
+        "media/Post 2 - 2.png",
+        "media/Post 2 - 3.png",
+        "media/Post 2 - 4.png",
+        "media/Post 2 - 5.png"
+      ],
+      "copy": [
+        "Por que eu falo tanto que o comportamento não é o problema, mas a ponta do iceberg?",
+        "Muitas vezes, quando uma criança apresenta um comportamento difícil, a primeira reação é tentar “consertar” isso rapidamente.",
+        "A birra, o medo, a agitação... tudo isso é o que a gente vê. Mas debaixo da superfície, existe uma necessidade não atendida, um sentimento não nomeado.",
+        "Meu trabalho não é dar “dicas de comportamento”, não acredito em receitas prontas porque a parentalidade ideal é um conceito irreal. A busca não deve ser o alívio do sintoma, porque assim a gente não olha a causa!",
+        "E tudo que não elaboramos na primeira infância, se arrasta pela vida adulta até chegar em consultório como diagnóstico."
+      ],
+      "caption": "Por que eu falo tanto que o comportamento não é o problema, mas a ponta do iceberg?\n\nMuitas vezes, quando uma criança apresenta um comportamento difícil, a primeira reação é tentar “consertar” isso rapidamente. \nA birra, o medo, a agitação... tudo isso é o que a gente vê. \nMas debaixo da superfície, existe uma necessidade não atendida, um sentimento não nomeado.\n\nMeu trabalho não é dar “dicas de comportamento”, não acredito em receitas prontas porque a parentalidade ideal é um conceito irreal. A busca não deve ser o alívio do sintoma, porque assim a gente não olha a causa! \nE tudo que não elaboramos na primeira infância, se arrasta pela vida adulta até chegar em consultório como diagnóstico.\nO que existe é a maternidade possível. Presente, imperfeita e situada no agora. Com dias bons e dias não tão bons assim… \n\nEste espaço se abre como um convite a novas conversas e reflexões deste universo tão rico. Será um prazer aprender e construir contigo aqui!"
+    },
+    {
+      "id": "3",
+      "type": "single",
+      "date": "Post 3",
+      "theme": "Endereço",
+      "title": "Conteúdo 3 | Local de Atendimento",
+      "images": [
+        "media/Post 3.png"
+      ],
+      "copy": [
+        "Av Cristóvão Colombo, 2948 | Sala 507 - Porto Alegre - Rio Grande do Sul"
+      ],
+      "caption": "Av Cristóvão Colombo, 2948 | Sala 507 - Porto Alegre - Rio Grande do Sul"
+    }
+  ]
+}
